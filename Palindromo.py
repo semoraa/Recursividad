@@ -1,9 +1,10 @@
 def palindromo(n):
-    if len(n)==1 or len(n)==0:
-        return " si es palindromo"
-    elif(n[0]==n[len(n)-1]):
-        n=n[1:-1]
-        return palindromo(n)
+    if len(n)==0 or len(n)==1:
+        return True
     else:
-        return "no es palindroma"
-print (palindromo(3222))
+        if n[0]==n[-1]:
+            return palindromo(n[1:-2])
+        else:
+            return False
+print (palindromo("axxa"))
+    
