@@ -3,8 +3,8 @@ def palindromo(n):
         return True
     else:
         if n[0]==n[-1]:
-            return palindromo(n[1:-2])
+            return palindromo(n[1:-1])
         else:
             return False
-print (palindromo("axxa"))
+print (palindromo("123454321"))
     
