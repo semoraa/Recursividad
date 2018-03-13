@@ -1,0 +1,25 @@
+--division
+division :: Int->Int->Int
+division n 0 = 0
+division 0 m = 0
+division n m = if n < m then 0 else 1 + division(n-m) m
+
+--producto
+producto :: Int->Int->Int
+producto n 0 = 0
+producto 0 m = 0
+producto n 1 = n
+producto 1 m = m 
+producto n m = n + producto n m-1
+
+--potencia
+potencia :: Int->Int->Int
+potencia n 0 = 1
+potencia 0 m = 0
+potencia n 1 = n
+potencia n m = n * potencia n m-1
+
+--suma digitos
+suma_digitos :: Int->Int->Int
+suma_digitos n < 10 = n
+suma_digitos n%10 + suma_digitos(n//10)
